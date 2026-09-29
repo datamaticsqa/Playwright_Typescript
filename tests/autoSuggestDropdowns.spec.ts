@@ -17,7 +17,7 @@ test('Auto suggested dropdowns',async({page})=>{
         console.log(options.nth(i).innerText()) // it will returns the all the auto suggested options
         console.log(options.nth(i).textContent()) // it will returns the all the auto suggested options
      }
-     page.waitForTimeout(4000);
+     await page.waitForTimeout(4000);
 
 
 })
