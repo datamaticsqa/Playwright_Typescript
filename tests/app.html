@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playwright Locator & Action Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #374151;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .success {
+            background: #16a34a;
+            color: white;
+        }
+
+        .danger {
+            background: #dc2626;
+            color: white;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e5e7eb;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #notification {
+            margin-top: 15px;
+            padding: 10px;
+            background: #dcfce7;
+            color: #166534;
+            display: none;
+        }
+
+        .tooltip {
+            display: inline-block;
+            position: relative;
+            cursor: help;
+        }
+
+        .tooltip span {
+            visibility: hidden;
+            position: absolute;
+            background: black;
+            color: white;
+            padding: 5px;
+            border-radius: 4px;
+            width: 180px;
+            bottom: 25px;
+            left: 0;
+        }
+
+        .tooltip:hover span {
+            visibility: visible;
+        }
+
+        dialog {
+            border: none;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 25px rgba(0,0,0,.3);
+        }
+
+        iframe {
+            width: 100%;
+            height: 180px;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            text-align: center;
+            background: #1f2937;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 id="page-title">Playwright Locator & Action Demo</h1>
+    <p>HTML page for Playwright + TypeScript automation training</p>
+</header>
+
+<nav aria-label="Main Navigation">
+    <a href="#login" id="login-link">Login</a>
+    <a href="#registration" id="registration-link">Registration</a>
+    <a href="#form">Forms</a>
+    <a href="#table">Table</a>
+    <a href="#actions">Actions</a>
+</nav>
+
+<div class="container">
+
+    <!-- ===================================================== -->
+    <!-- TEXT & BASIC LOCATORS -->
+    <!-- ===================================================== -->
+
+    <section class="card" id="basic-locators">
+
+        <h2>1. Text & Basic Locators</h2>
+
+        <p id="welcome-message">
+            Welcome to the Playwright automation demo page.
+        </p>
+
+        <p class="description">
+            This paragraph can be located using CSS class selectors.
+        </p>
+
+        <button
+            id="welcome-button"
+            class="primary"
+            title="Click Welcome Button"
+            aria-label="Welcome Button">
+            Welcome
+        </button>
+
+        <button
+            id="save-button"
+            class="success"
+            data-testid="save-btn">
+            Save
+        </button>
+
+        <button
+            id="delete-button"
+            class="danger"
+            data-test="delete-btn">
+            Delete
+        </button>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- LOGIN FORM -->
+    <!-- ===================================================== -->
+
+    <section class="card" id="login">
+
+        <h2>2. Login Form</h2>
+
+        <form id="login-form">
+
+            <label for="username">
+                Username
+            </label>
+
+            <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="Enter username"
+                aria-label="Username"
+                data-testid="username-input"
+                autocomplete="username">
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Enter password"
+                aria-label="Password"
+                data-testid="password-input"
+                autocomplete="current-password">
+
+            <button
+                type="submit"
+                id="login-button"
+                class="primary">
+                Login
+            </button>
+
+            <button
+                type="button"
+                id="clear-login">
+                Clear
+            </button>
+
+        </form>
+
+        <div id="login-message"></div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- REGISTRATION FORM -->
+    <!-- ===================================================== -->
+
+    <section class="card" id="registration">
+
+        <h2>3. Registration Form</h2>
+
+        <form id="registration-form">
+
+            <label for="firstName">
+                First Name
+            </label>
+
+            <input
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="First Name"
+                required>
+
+            <label for="lastName">
+                Last Name
+            </label>
+
+            <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Last Name">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Enter email">
+
+            <label for="phone">
+                Phone Number
+            </label>
+
+            <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Enter phone number">
+
+            <label for="dob">
+                Date of Birth
+            </label>
+
+            <input
+                id="dob"
+                name="dob"
+                type="date">
+
+            <label for="country">
+                Country
+            </label>
+
+            <select
+                id="country"
+                name="country"
+                aria-label="Country">
+
+                <option value="">
+                    Select Country
+                </option>
+
+                <option value="india">
+                    India
+                </option>
+
+                <option value="usa">
+                    United States
+                </option>
+
+                <option value="uk">
+                    United Kingdom
+                </option>
+
+                <option value="canada">
+                    Canada
+                </option>
+
+                <option value="australia">
+                    Australia
+                </option>
+
+            </select>
+
+            <label for="city">
+                City
+            </label>
+
+            <select
+                id="city"
+                name="city">
+
+                <option value="">
+                    Select City
+                </option>
+
+                <option value="bangalore">
+                    Bangalore
+                </option>
+
+                <option value="hyderabad">
+                    Hyderabad
+                </option>
+
+                <option value="chennai">
+                    Chennai
+                </option>
+
+                <option value="mumbai">
+                    Mumbai
+                </option>
+
+            </select>
+
+
+            <!-- Radio Buttons -->
+
+            <label>
+                Gender
+            </label>
+
+            <div class="radio-group">
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="male">
+                    Male
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="female">
+                    Female
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="other">
+                    Other
+                </label>
+
+            </div>
+
+
+            <!-- Checkboxes -->
+
+            <label>
+                Skills
+            </label>
+
+            <div class="checkbox-group">
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="skills"
+                        value="playwright">
+                    Playwright
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="skills"
+                        value="selenium">
+                    Selenium
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="skills"
+                        value="typescript">
+                    TypeScript
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="skills"
+                        value="api">
+                    API Testing
+                </label>
+
+            </div>
+
+
+            <label for="experience">
+                Experience
+            </label>
+
+            <input
+                id="experience"
+                name="experience"
+                type="range"
+                min="0"
+                max="15"
+                value="5">
+
+
+            <label for="comments">
+                Comments
+            </label>
+
+            <textarea
+                id="comments"
+                name="comments"
+                rows="5"
+                placeholder="Enter your comments"></textarea>
+
+
+            <label for="resume">
+                Upload Resume
+            </label>
+
+            <input
+                id="resume"
+                name="resume"
+                type="file">
+
+
+            <label>
+                <input
+                    id="terms"
+                    name="terms"
+                    type="checkbox"
+                    required>
+                I accept the Terms and Conditions
+            </label>
+
+
+            <button
+                type="submit"
+                id="register-button"
+                class="success">
+                Register
+            </button>
+
+            <button
+                type="reset"
+                id="reset-button">
+                Reset
+            </button>
+
+        </form>
+
+        <div id="registration-message"></div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- SEARCH -->
+    <!-- ===================================================== -->
+
+    <section class="card">
+
+        <h2>4. Search & Dynamic Elements</h2>
+
+        <label for="search">
+            Search Products
+        </label>
+
+        <input
+            id="search"
+            type="search"
+            placeholder="Search products..."
+            aria-label="Search Products">
+
+        <button
+            id="search-button"
+            class="primary">
+            Search
+        </button>
+
+        <div id="search-result"></div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- TABLE -->
+    <!-- ===================================================== -->
+
+    <section class="card" id="table">
+
+        <h2>5. Web Table</h2>
+
+        <table
+            id="employee-table"
+            aria-label="Employee Table">
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>101</td>
+                    <td>John Smith</td>
+                    <td>QA Engineer</td>
+                    <td>Testing</td>
+                    <td>Active</td>
+                    <td>
+                        <button
+                            class="view-button"
+                            data-id="101">
+                            View
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>Priya Sharma</td>
+                    <td>Automation Engineer</td>
+                    <td>Testing</td>
+                    <td>Active</td>
+                    <td>
+                        <button
+                            class="view-button"
+                            data-id="102">
+                            View
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>103</td>
+                    <td>David Wilson</td>
+                    <td>Developer</td>
+                    <td>Engineering</td>
+                    <td>Inactive</td>
+                    <td>
+                        <button
+                            class="view-button"
+                            data-id="103">
+                            View
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>104</td>
+                    <td>Sarah Jones</td>
+                    <td>Test Lead</td>
+                    <td>QA</td>
+                    <td>Active</td>
+                    <td>
+                        <button
+                            class="view-button"
+                            data-id="104">
+                            View
+                        </button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <div id="employee-details"></div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- CHECKBOX / ACTIONS -->
+    <!-- ===================================================== -->
+
+    <section class="card" id="actions">
+
+        <h2>6. Actionable Elements</h2>
+
+        <button
+            id="normal-button"
+            class="primary">
+            Normal Button
+        </button>
+
+        <button
+            id="double-click-button"
+            class="success">
+            Double Click Me
+        </button>
+
+        <button
+            id="right-click-button">
+            Right Click Me
+        </button>
+
+        <button
+            id="disabled-button"
+            disabled>
+            Disabled Button
+        </button>
+
+        <button
+            id="hidden-button"
+            class="hidden">
+            Hidden Button
+        </button>
+
+        <button
+            id="dynamic-button">
+            Generate Dynamic Text
+        </button>
+
+        <p id="dynamic-text">
+            Original text
+        </p>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- TOOLTIP -->
+    <!-- ===================================================== -->
+
+    <section class="card">
+
+        <h2>7. Tooltip</h2>
+
+        <div class="tooltip" id="help-tooltip">
+            Hover over me
+            <span>
+                This is a Playwright tooltip.
+            </span>
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- DIALOG -->
+    <!-- ===================================================== -->
+
+    <section class="card">
+
+        <h2>8. Dialog / Modal</h2>
+
+        <button
+            id="open-dialog"
+            class="primary">
+            Open Dialog
+        </button>
+
+        <dialog id="user-dialog">
+
+            <h3 id="dialog-title">
+                User Information
+            </h3>
+
+            <p>
+                This is a native HTML dialog.
+            </p>
+
+            <label for="dialog-name">
+                Name
+            </label>
+
+            <input
+                id="dialog-name"
+                placeholder="Enter name">
+
+            <button
+                id="dialog-save"
+                class="success">
+                Save
+            </button>
+
+            <button
+                id="dialog-close">
+                Close
+            </button>
+
+        </dialog>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- FRAME -->
+    <!-- ===================================================== -->
+
+    <section class="card">
+
+        <h2>9. iframe</h2>
+
+        <iframe
+            id="demo-frame"
+            name="demo-frame"
+            title="Demo Frame"
+            srcdoc="
+                <html>
+                    <body>
+                        <h3 id='frame-title'>Inside iframe</h3>
+
+                        <label for='frame-input'>
+                            Frame Input
+                        </label>
+
+                        <input
+                            id='frame-input'
+                            placeholder='Enter value'>
+
+                        <button
+                            id='frame-button'
+                            onclick='document.getElementById(&quot;frame-message&quot;).innerText=&quot;Frame button clicked&quot;'>
+                            Click Frame Button
+                        </button>
+
+                        <p id='frame-message'></p>
+                    </body>
+                </html>
+            ">
+        </iframe>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- LINKS -->
+    <!-- ===================================================== -->
+
+    <section class="card">
+
+        <h2>10. Links</h2>
+
+        <a
+            id="google-link"
+            href="https://www.google.com"
+            target="_blank">
+            Google
+        </a>
+
+        <br><br>
+
+        <a
+            id="same-page-link"
+            href="#page-title">
+            Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- NOTIFICATION -->
+    <!-- ===================================================== -->
+
+    <section class="card">
+
+        <h2>11. Notification</h2>
+
+        <button
+            id="notification-button"
+            class="success">
+            Show Notification
+        </button>
+
+        <div id="notification">
+            Operation completed successfully!
+        </div>
+
+    </section>
+
+</div>
+
+
+<footer>
+    Playwright + TypeScript Locator Training Demo
+</footer>
+
+
+<script>
+
+    // Login
+    document
+        .getElementById("login-form")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("login-message")
+                .innerText = "Login successful";
+
+        });
+
+
+    // Clear Login
+    document
+        .getElementById("clear-login")
+        .addEventListener("click", function() {
+
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+
+        });
+
+
+    // Registration
+    document
+        .getElementById("registration-form")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("registration-message")
+                .innerText = "Registration successful";
+
+        });
+
+
+    // Search
+    document
+        .getElementById("search-button")
+        .addEventListener("click", function() {
+
+            const value =
+                document.getElementById("search").value;
+
+            document.getElementById("search-result")
+                .innerText =
+                "Search result for: " + value;
+
+        });
+
+
+    // Welcome button
+    document
+        .getElementById("welcome-button")
+        .addEventListener("click", function() {
+
+            alert("Welcome to Playwright!");
+
+        });
+
+
+    // Save
+    document
+        .getElementById("save-button")
+        .addEventListener("click", function() {
+
+            document.getElementById("notification").style.display =
+                "block";
+
+            document.getElementById("notification").innerText =
+                "Data saved successfully";
+
+        });
+
+
+    // Delete
+    document
+        .getElementById("delete-button")
+        .addEventListener("click", function() {
+
+            confirm("Are you sure you want to delete?");
+
+        });
+
+
+    // Table
+    document
+        .querySelectorAll(".view-button")
+        .forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                const id = this.getAttribute("data-id");
+
+                document.getElementById("employee-details")
+                    .innerText =
+                    "Selected Employee ID: " + id;
+
+            });
+
+        });
+
+
+    // Double click
+    document
+        .getElementById("double-click-button")
+        .addEventListener("dblclick", function() {
+
+            this.innerText = "Double Click Successful";
+
+        });
+
+
+    // Right click
+    document
+        .getElementById("right-click-button")
+        .addEventListener("contextmenu", function(event) {
+
+            event.preventDefault();
+
+            this.innerText = "Right Click Successful";
+
+        });
+
+
+    // Dynamic button
+    document
+        .getElementById("dynamic-button")
+        .addEventListener("click", function() {
+
+            const randomNumber =
+                Math.floor(Math.random() * 10000);
+
+            document.getElementById("dynamic-text")
+                .innerText =
+                "Dynamic value: " + randomNumber;
+
+        });
+
+
+    // Dialog
+    const dialog =
+        document.getElementById("user-dialog");
+
+    document
+        .getElementById("open-dialog")
+        .addEventListener("click", function() {
+
+            dialog.showModal();
+
+        });
+
+
+    document
+        .getElementById("dialog-close")
+        .addEventListener("click", function() {
+
+            dialog.close();
+
+        });
+
+
+    document
+        .getElementById("dialog-save")
+        .addEventListener("click", function() {
+
+            alert("Dialog data saved");
+
+        });
+
+
+    // Notification
+    document
+        .getElementById("notification-button")
+        .addEventListener("click", function() {
+
+            document.getElementById("notification")
+                .style.display = "block";
+
+        });
+
+</script>
+
+</body>
+</html>
