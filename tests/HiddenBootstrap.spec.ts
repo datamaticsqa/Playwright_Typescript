@@ -16,7 +16,7 @@ test('Hidden Bootstrap dropdowns',async({page})=>{
         await page.waitForTimeout(3000);
     
     
-     //capturing the all  auto suggested options
+     //capturing the all  auto suggested options -- Ctrl+Shift+P --> emulate a focused page
      const options:Locator=page.locator("div[role='listbox'] span");
      const count=await options.count();
 
