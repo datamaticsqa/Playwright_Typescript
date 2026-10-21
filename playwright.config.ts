@@ -1,5 +1,5 @@
-import { defineConfig, devices } from '@playwright/test';
-import reportingLabs from 'reporting-labs';
+import { defineConfig, devices } from "@playwright/test";
+import reportingLabs from "reporting-labs";
 
 /**
  * Read environment variables from file.
@@ -13,39 +13,46 @@ import reportingLabs from 'reporting-labs';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',  // all the test related scripts will be placed here
+  testDir: "./tests", // all the test related scripts will be placed here
   /* Run tests in files in parallel */
   fullyParallel: true,
-  
+  //timeout:50000, //maximum time a test can run for
+  //capture screenshot only when the test fails
+  //expect: {timeout: 4000}, //maximum time expect() should wait for the condition to be met
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
-  
+
+  grep: /@sanity/,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  retries: 1,
+  //retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  //workers: 1,
-  workers: process.env.CI ? 1 : undefined,
+  workers: 3,
+  //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  //reporter: 'html',
-  reporter: [['list'], ['reporting-labs', reportingLabs]],
+  //reporter: "html",
+  reporter: [["list"], ["reporting-labs", reportingLabs]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
-
+    screenshot: "only-on-failure",
+    video: "on",
+    // trace: "on",
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-    testIdAttribute:'data-pwd'
+    // trace: 'on-first-retry',
+    testIdAttribute: "data-pwd",
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
+      fullyParallel: false,
     },
 
-     {
+    /*    {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     }, 
@@ -53,7 +60,7 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    },
+    }, */
 
     /* Test against mobile viewports. */
     // {
