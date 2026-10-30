@@ -1,439 +1,5 @@
 [
  {
-  "time": 1791435908955,
-  "duration": 8430.414,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/PopupsAnsWindows.spec.ts::Handle Popups and Windows": [
-    "p",
-    6958
-   ]
-  }
- },
- {
-  "time": 1791436195572,
-  "duration": 8613.332,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/PopupsAnsWindows.spec.ts::Handle Popups and Windows": [
-    "p",
-    7189
-   ]
-  }
- },
- {
-  "time": 1791436809414,
-  "duration": 34721.815,
-  "passed": 0,
-  "failed": 1,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/authenticatedPopup.spec.ts::Handle Popups and Windows": [
-    "f",
-    30006
-   ]
-  }
- },
- {
-  "time": 1791437113424,
-  "duration": 32471.003999999997,
-  "passed": 0,
-  "failed": 1,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/authenticatedPopup.spec.ts::Handle Popups and Windows": [
-    "f",
-    30016
-   ]
-  }
- },
- {
-  "time": 1791522545876,
-  "duration": 9822.979,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/AutowatingAndTimeouts.spec.ts::Autowatiing and Timeout Demo": [
-    "p",
-    7255
-   ]
-  }
- },
- {
-  "time": 1791523954126,
-  "duration": 9121.723,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/AutowatingAndTimeouts.spec.ts::Autowatiing and Timeout Demo": [
-    "p",
-    7233
-   ]
-  }
- },
- {
-  "time": 1791524017182,
-  "duration": 33.783000000000015,
-  "passed": 0,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 0,
-  "tests": {}
- },
- {
-  "time": 1791524033233,
-  "duration": 9021.724,
-  "passed": 0,
-  "failed": 1,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/Asseertions.spec.ts::Assertions Demo": [
-    "f",
-    7455
-   ]
-  }
- },
- {
-  "time": 1791780741157,
-  "duration": 3890.908,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/codeGen.spec.ts::test": [
-    "p",
-    2518
-   ]
-  }
- },
- {
-  "time": 1791781375509,
-  "duration": 3906.113,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/CodeGen.spec.ts::test": [
-    "p",
-    2555
-   ]
-  }
- },
- {
-  "time": 1791781703760,
-  "duration": 8089.168,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/CodeGen.spec.ts::test": [
-    "p",
-    6636
-   ]
-  }
- },
- {
-  "time": 1791782205526,
-  "duration": 10334.409,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/CodeGen.spec.ts::test": [
-    "p",
-    9398
-   ]
-  }
- },
- {
-  "time": 1791782501170,
-  "duration": 5015.179,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/CodeGen.spec.ts::test": [
-    "p",
-    3755
-   ]
-  }
- },
- {
-  "time": 1791782747693,
-  "duration": 285525.628,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/CodeGen.spec.ts::test": [
-    "p",
-    284153
-   ]
-  }
- },
- {
-  "time": 1792555262875,
-  "duration": 8226.753,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 1,
-  "total": 2,
-  "tests": {
-   "chromium::tests/hooks.spec.ts::Mygroup › Find no.of products": [
-    "p",
-    2552
-   ],
-   "chromium::tests/hooks.spec.ts::Mygroup › Add the product to cart": [
-    "s",
-    0
-   ]
-  }
- },
- {
-  "time": 1792558376447,
-  "duration": 4231.263,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 1,
-  "total": 2,
-  "tests": {
-   "chromium::tests/Annotations.spec.ts::test1": [
-    "p",
-    2830
-   ],
-   "chromium::tests/Annotations.spec.ts::test2": [
-    "s",
-    0
-   ]
-  }
- },
- {
-  "time": 1792558646655,
-  "duration": 14971.745,
-  "passed": 1,
-  "failed": 1,
-  "flaky": 0,
-  "skipped": 1,
-  "total": 3,
-  "tests": {
-   "chromium::tests/Annotations.spec.ts::test1": [
-    "f",
-    1862
-   ],
-   "chromium::tests/Annotations.spec.ts::test2": [
-    "p",
-    1499
-   ],
-   "chromium::tests/Annotations.spec.ts::test3": [
-    "s",
-    649
-   ]
-  }
- },
- {
-  "time": 1792558719701,
-  "duration": 14300.707,
-  "passed": 2,
-  "failed": 1,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 3,
-  "tests": {
-   "chromium::tests/Annotations.spec.ts::test1": [
-    "f",
-    5692
-   ],
-   "chromium::tests/Annotations.spec.ts::test2": [
-    "p",
-    1455
-   ],
-   "chromium::tests/Annotations.spec.ts::test3": [
-    "p",
-    1525
-   ]
-  }
- },
- {
-  "time": 1792558866698,
-  "duration": 10541.386,
-  "passed": 2,
-  "failed": 1,
-  "flaky": 0,
-  "skipped": 1,
-  "total": 4,
-  "tests": {
-   "chromium::tests/Annotations.spec.ts::test1": [
-    "f",
-    1809
-   ],
-   "chromium::tests/Annotations.spec.ts::test2": [
-    "p",
-    1741
-   ],
-   "chromium::tests/Annotations.spec.ts::test3": [
-    "p",
-    1294
-   ],
-   "chromium::tests/Annotations.spec.ts::test4": [
-    "s",
-    0
-   ]
-  }
- },
- {
-  "time": 1792559514720,
-  "duration": 3023.491,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/Tagging.spec.ts::@sanity check tittle of the homepage": [
-    "p",
-    1697
-   ]
-  }
- },
- {
-  "time": 1792560183812,
-  "duration": 8755.461,
-  "passed": 2,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 2,
-  "tests": {
-   "chromium::tests/Tagging.spec.ts::check tittle of the homepage": [
-    "p",
-    5904
-   ],
-   "chromium::tests/Tagging.spec.ts::check Popular on the Google Store ": [
-    "p",
-    1317
-   ]
-  }
- },
- {
-  "time": 1792560321602,
-  "duration": 16.892000000000053,
-  "passed": 0,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 0,
-  "tests": {}
- },
- {
-  "time": 1792560377753,
-  "duration": 13.791999999999916,
-  "passed": 0,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 0,
-  "tests": {}
- },
- {
-  "time": 1792560466026,
-  "duration": 2799.705,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/Tagging.spec.ts::check Popular on the Google Store ": [
-    "p",
-    1421
-   ]
-  }
- },
- {
-  "time": 1792560529859,
-  "duration": 22656.244000000002,
-  "passed": 1,
-  "failed": 1,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 2,
-  "tests": {
-   "chromium::tests/Tagging.spec.ts::check navigation to store page": [
-    "f",
-    8443
-   ],
-   "chromium::tests/Tagging.spec.ts::check Popular on the Google Store ": [
-    "p",
-    1857
-   ]
-  }
- },
- {
-  "time": 1792560711154,
-  "duration": 2885.1890000000003,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/Tagging.spec.ts::check tittle of the homepage": [
-    "p",
-    1566
-   ]
-  }
- },
- {
-  "time": 1792560775346,
-  "duration": 2935.0099999999998,
-  "passed": 1,
-  "failed": 0,
-  "flaky": 0,
-  "skipped": 0,
-  "total": 1,
-  "tests": {
-   "chromium::tests/Tagging.spec.ts::check tittle of the homepage": [
-    "p",
-    1600
-   ]
-  }
- },
- {
   "time": 1792561389232,
   "duration": 3387.224,
   "passed": 1,
@@ -470,6 +36,393 @@
    "chromium::tests/Tagging.spec.ts::check tittle of the homepage": [
     "p",
     1699
+   ]
+  }
+ },
+ {
+  "time": 1792644642300,
+  "duration": 34.62099999999998,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792644675683,
+  "duration": 117.16300000000001,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792644717093,
+  "duration": 47.660999999999945,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792644734222,
+  "duration": 7175.4580000000005,
+  "passed": 1,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 1,
+  "tests": {
+   "chromium::tests/Tagging.spec.ts::check tittle of the homepage": [
+    "p",
+    2251
+   ]
+  }
+ },
+ {
+  "time": 1792644776372,
+  "duration": 56.87200000000007,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792644811863,
+  "duration": 39.38099999999997,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792644857258,
+  "duration": 50.722000000000094,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792644920991,
+  "duration": 34.20100000000002,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792644963044,
+  "duration": 38.666000000000054,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792645031891,
+  "duration": 45.44100000000003,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792645053024,
+  "duration": 2918.39,
+  "passed": 1,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 1,
+  "tests": {
+   "chromium::tests/Tagging.spec.ts::check tittle of the homepage": [
+    "p",
+    1567
+   ]
+  }
+ },
+ {
+  "time": 1792645098556,
+  "duration": 39.91000000000008,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792645187441,
+  "duration": 46.63900000000001,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792645233641,
+  "duration": 18378.464,
+  "passed": 0,
+  "failed": 1,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 1,
+  "tests": {
+   "chromium::tests/param2.spec.ts::Search test for item1212": [
+    "f",
+    7063
+   ]
+  }
+ },
+ {
+  "time": 1792645509618,
+  "duration": 70921.591,
+  "passed": 1,
+  "failed": 3,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 4,
+  "tests": {
+   "chromium::tests/Param1.spec.ts::Search test for Laptop": [
+    "p",
+    4426
+   ],
+   "chromium::tests/Param1.spec.ts::Search test for Gift card": [
+    "f",
+    9861
+   ],
+   "chromium::tests/Param1.spec.ts::Search test for smartphone": [
+    "f",
+    9269
+   ],
+   "chromium::tests/Param1.spec.ts::Search test for monitor": [
+    "f",
+    9721
+   ]
+  }
+ },
+ {
+  "time": 1792730411049,
+  "duration": 36729.193,
+  "passed": 0,
+  "failed": 4,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 4,
+  "tests": {
+   "chromium::tests/param2.spec.ts::Login test for test198@example.com and test123": [
+    "f",
+    2564
+   ],
+   "chromium::tests/param2.spec.ts::Login test for invaliduser@example.com and test123": [
+    "f",
+    2680
+   ],
+   "chromium::tests/param2.spec.ts::Login test for validuser@example.com and testxyz": [
+    "f",
+    2705
+   ],
+   "chromium::tests/param2.spec.ts::Login test for  and ": [
+    "f",
+    2623
+   ]
+  }
+ },
+ {
+  "time": 1792730592727,
+  "duration": 14637.581,
+  "passed": 4,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 4,
+  "tests": {
+   "chromium::tests/param2.spec.ts::Login test for test198@example.com and test123": [
+    "p",
+    4186
+   ],
+   "chromium::tests/param2.spec.ts::Login test for invaliduser@example.com and test123": [
+    "p",
+    3102
+   ],
+   "chromium::tests/param2.spec.ts::Login test for validuser@example.com and testxyz": [
+    "p",
+    3060
+   ],
+   "chromium::tests/param2.spec.ts::Login test for  and ": [
+    "p",
+    2971
+   ]
+  }
+ },
+ {
+  "time": 1792731383842,
+  "duration": 141.14999999999998,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792731428884,
+  "duration": 31.557000000000016,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792731609453,
+  "duration": 29.09699999999998,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792731638479,
+  "duration": 145.46499999999992,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792731688646,
+  "duration": 144.21699999999998,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792731735595,
+  "duration": 9809.569,
+  "passed": 1,
+  "failed": 1,
+  "flaky": 0,
+  "skipped": 2,
+  "total": 4,
+  "tests": {
+   "chromium::tests/param2.spec.ts::Login with multiple sets of data › Login test for test198@example.com and test123": [
+    "p",
+    3934
+   ],
+   "chromium::tests/param2.spec.ts::Login with multiple sets of data › Login test for invaliduser@example.com and test123": [
+    "f",
+    2260
+   ],
+   "chromium::tests/param2.spec.ts::Login with multiple sets of data › Login test for validuser@example.com and testxyz": [
+    "s",
+    0
+   ],
+   "chromium::tests/param2.spec.ts::Login with multiple sets of data › Login test for  and ": [
+    "s",
+    0
+   ]
+  }
+ },
+ {
+  "time": 1792731884347,
+  "duration": 149.332,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792731946293,
+  "duration": 152.92499999999995,
+  "passed": 0,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 0,
+  "tests": {}
+ },
+ {
+  "time": 1792731998198,
+  "duration": 14445.425000000001,
+  "passed": 4,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 4,
+  "tests": {
+   "chromium::tests/param3.spec.ts::Login test for test198@example.com and test123": [
+    "p",
+    4107
+   ],
+   "chromium::tests/param3.spec.ts::Login test for invaliduser@example.com and test123": [
+    "p",
+    3226
+   ],
+   "chromium::tests/param3.spec.ts::Login test for validuser@example.com and InvalidPass_789!": [
+    "p",
+    2829
+   ],
+   "chromium::tests/param3.spec.ts::Login test for   and  ": [
+    "p",
+    2729
+   ]
+  }
+ },
+ {
+  "time": 1792733783278,
+  "duration": 13978.178,
+  "passed": 4,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 4,
+  "tests": {
+   "chromium::tests/param5.spec.ts::Login with multiple sets of data › Login test for test198@example.com and test123": [
+    "p",
+    3870
+   ],
+   "chromium::tests/param5.spec.ts::Login with multiple sets of data › Login test for invaliduser@example.com and test123": [
+    "p",
+    2797
+   ],
+   "chromium::tests/param5.spec.ts::Login with multiple sets of data › Login test for validuser@example.com and testxyz": [
+    "p",
+    2816
+   ],
+   "chromium::tests/param5.spec.ts::Login with multiple sets of data › Login test for  and ": [
+    "p",
+    2741
    ]
   }
  }

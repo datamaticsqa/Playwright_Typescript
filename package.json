@@ -9,6 +9,11 @@
   "devDependencies": {
     "@playwright/test": "^1.63.0",
     "@types/node": "^22.20.2",
+    "allure-playwright": "^3.14.0",
     "reporting-labs": "^0.6.6"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.3",
+    "xlsx": "^0.18.5"
   }
 }
